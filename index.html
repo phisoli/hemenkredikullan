@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HemenKrediKullan - Kredi Danışmanlık Hizmeti</title>
+  <title>HemenKrediKullan - Kredi Danışmanlığı</title>
   <style>
-    /* Temel reset */
-    * {
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0; padding: 0;
@@ -16,29 +12,20 @@
       color: #2c3e50;
       line-height: 1.6;
     }
-    a {
-      color: #20639b;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
     header {
       background: linear-gradient(90deg, #3caea3, #20639b);
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
     header h1 {
+      font-size: 3rem;
       margin: 0 0 10px;
-      font-size: 2.8rem;
     }
     header p {
       font-size: 1.3rem;
       font-weight: 300;
     }
-
     main {
       max-width: 800px;
       margin: 30px auto;
@@ -47,111 +34,35 @@
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-
-    section {
-      margin-bottom: 40px;
-    }
-
     h2 {
       color: #20639b;
       margin-bottom: 20px;
       font-weight: 600;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
-
-    p {
-      font-size: 1rem;
+    ul {
+      margin-left: 20px;
+      margin-bottom: 30px;
     }
-
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-weight: 600;
+    li {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
     }
-    form input[type="text"],
-    form input[type="tel"],
-    form input[type="email"],
-    form input[type="number"],
-    form select,
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border-radius: 8px;
-      border: 1px solid #bbb;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-      font-family: inherit;
-    }
-    form input[type="text"]:focus,
-    form input[type="tel"]:focus,
-    form input[type="email"]:focus,
-    form input[type="number"]:focus,
-    form select:focus,
-    form textarea:focus {
-      border-color: #3caea3;
-      outline: none;
-    }
-
-    form textarea {
-      resize: vertical;
-    }
-
-    form label.checkbox-label {
-      font-weight: normal;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    form label.checkbox-label input[type="checkbox"] {
-      width: auto;
-      margin: 0;
-      cursor: pointer;
-    }
-
     button {
-      margin-top: 30px;
+      display: block;
+      margin: 40px auto 0;
       background: #3caea3;
       color: white;
-      padding: 14px 0;
-      width: 100%;
       border: none;
+      padding: 15px 40px;
       border-radius: 10px;
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 1.3rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     button:hover {
       background: #2b8d89;
     }
-
-    .success-message {
-      display: none;
-      margin-top: 25px;
-      padding: 18px;
-      background-color: #d4edda;
-      color: #155724;
-      border-radius: 8px;
-      border: 1px solid #c3e6cb;
-      font-weight: 600;
-    }
-
-    .contact {
-      background: #e6f2f1;
-      padding: 25px 30px;
-      border-radius: 12px;
-    }
-    .contact h3 {
-      margin-top: 0;
-      color: #20639b;
-    }
-    .contact p {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
     footer {
       text-align: center;
       padding: 20px 0;
@@ -160,24 +71,20 @@
       background: #f7fafb;
       margin-top: 30px;
     }
-
-    /* Responsive */
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
       main {
-        padding: 20px 15px;
         margin: 15px;
+        padding: 20px;
       }
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       button {
-        font-size: 1rem;
-      }
-      .contact p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding: 12px 30px;
       }
     }
   </style>
@@ -186,62 +93,21 @@
 
 <header>
   <h1>HemenKrediKullan</h1>
-  <p>Kredi ihtiyaçlarınızda yanınızdayız, hızlı ve güvenilir danışmanlık hizmeti</p>
+  <p>Kredi kullanma rehberiniz, en doğru ve hızlı kredi danışmanlık hizmeti</p>
 </header>
 
 <main>
+  <h2>Kredi Kullanırken Bilmeniz Gerekenler</h2>
+  <ul>
+    <li>Kredi başvurusu yapmadan önce ihtiyaçlarınızı net belirleyin.</li>
+    <li>Kredi faiz oranları ve geri ödeme planlarını mutlaka inceleyin.</li>
+    <li>Findex risk raporunuzu önceden kontrol edin, kredi onay sürecinizi hızlandırın.</li>
+    <li>Gelir belgesi ve kimlik gibi evraklarınızı hazır tutun.</li>
+    <li>KVKK aydınlatma metnini okuyup onaylamadan başvuru yapmayın.</li>
+    <li>En uygun kredi fırsatlarını kaçırmamak için uzman danışmanlarımızla iletişime geçin.</li>
+  </ul>
 
-  <section>
-    <h2>Kredi Danışmanlığı Nedir?</h2>
-    <p>Kredi danışmanlığı hizmetimiz ile size en uygun kredi seçeneklerini sunuyoruz. Bankaların güncel kredi faiz oranlarını takip ediyor, sizin bütçenize ve ihtiyaçlarınıza en uygun çözümleri en hızlı şekilde sağlıyoruz.</p>
-  </section>
-
-  <section>
-    <h2>Kredi Başvuru Formu</h2>
-    <form id="krediFormu" action="https://formspree.io/f/mkgzvewk" method="POST">
-      <label for="ad">Adınız</label>
-      <input type="text" id="ad" name="ad" required>
-
-      <label for="soyad">Soyadınız</label>
-      <input type="text" id="soyad" name="soyad" required>
-
-      <label for="telefon">Telefon Numaranız</label>
-      <input type="tel" id="telefon" name="telefon" required>
-
-      <label for="email">E-posta Adresiniz</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="krediTuru">Kredi Türü</label>
-      <select id="krediTuru" name="krediTuru" required>
-        <option value="">Seçiniz</option>
-        <option value="ihtiyac">İhtiyaç Kredisi</option>
-        <option value="tasit">Taşıt Kredisi</option>
-        <option value="konut">Konut Kredisi</option>
-      </select>
-
-      <label for="tutar">Talep Edilen Tutar (TL)</label>
-      <input type="number" id="tutar" name="tutar" required min="1000" max="1000000" step="1000">
-
-      <label class="checkbox-label">
-        <input type="checkbox" name="kvkk" required>
-        KVKK metnini okudum ve onaylıyorum.
-      </label>
-
-      <button type="submit">Başvuruyu Gönder</button>
-    </form>
-
-    <div class="success-message" id="successMessage">
-      Başvurunuz başarıyla alındı. En kısa sürede sizinle iletişime geçeceğiz.
-    </div>
-  </section>
-
-  <section class="contact">
-    <h3>Bize Ulaşın</h3>
-    <p><strong>Telefon:</strong> <a href="tel:+905550000000">+90 555 000 00 00</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/905550000000" target="_blank" rel="noopener noreferrer">+90 555 000 00 00</a></p>
-    <p><strong>E-posta:</strong> <a href="mailto:hemenkredikullaninfo@gmail.com">hemenkredikullaninfo@gmail.com</a></p>
-  </section>
-
+  <button id="goToFormBtn">Başvuru Formuna Geç</button>
 </main>
 
 <footer>
@@ -249,30 +115,8 @@
 </footer>
 
 <script>
-  const form = document.getElementById("krediFormu");
-  const successMessage = document.getElementById("successMessage");
-
-  form.addEventListener("submit", function(event){
-    event.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if(response.ok){
-        successMessage.style.display = "block";
-        form.reset();
-      } else {
-        alert("Başvuru gönderilemedi. Lütfen tekrar deneyiniz.");
-      }
-    }).catch(() => {
-      alert("Sunucu hatası. Lütfen daha sonra tekrar deneyin.");
-    });
+  document.getElementById('goToFormBtn').addEventListener('click', () => {
+    window.location.href = 'form.html';
   });
 </script>
 
