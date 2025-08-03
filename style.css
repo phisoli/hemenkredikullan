@@ -1,1 +1,57 @@
 
+/* Genel */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7fbfd;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+/* Başlık */
+header {
+  background: linear-gradient(to right, #3caea3, #20639b);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Ana içerik */
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Form başlığı */
+main h2 {
+  color: #20639b;
+  margin-bottom: 20px;
+}
+
+/* Form */
+form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+}
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px so
