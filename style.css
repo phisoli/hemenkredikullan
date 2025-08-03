@@ -1,39 +1,241 @@
-
-/* Genel */
+/* Genel reset ve temel ayarlar */
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f7fbfd;
-  margin: 0;
-  padding: 0;
-  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+  background: #f0f8ff; /* Açık pastel mavi ton */
+  color: #2c3e50; /* Koyu mavi-gri */
+  line-height: 1.6;
 }
 
-/* Başlık */
+/* Header */
 header {
-  background: linear-gradient(to right, #3caea3, #20639b);
+  background: linear-gradient(90deg, #3caea3, #20639b);
   color: white;
   padding: 40px 20px;
   text-align: center;
 }
 header h1 {
   margin: 0;
-  font-size: 36px;
-}
-header p {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 2.5rem;
 }
 
-/* Ana içerik */
+/* Main container */
 main {
   max-width: 700px;
   margin: 30px auto;
   background: white;
-  padding: 30px;
+  padding: 30px 40px;
   border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Başlıklar */
+h2 {
+  color: #20639b;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* Form alanları */
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #20639b;
+}
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1.5px solid #a1d6e2; /* pastel mavi */
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  background: #e7f0f5; /* çok açık mavi */
+  color: #205072; /* koyu mavi */
+}
+
+form input[type="text"]:focus,
+form input[type="tel"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+  border-color: #3caea3; /* canlı yeşil-mavi */
+  outline: none;
+  background: #d0ebf6; /* biraz daha açık */
+  box-shadow: 0 0 6px #3caea3aa;
+}
+
+/* Textarea büyüklüğü */
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Checkbox ve kvkk metni */
+form label.checkbox-label {
+  font-weight: normal;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #20639b;
+}
+form label.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* KVKK metni butonu */
+form label.checkbox-label button {
+  background: none;
+  border: none;
+  color: #3caea3;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+form label.checkbox-label button:hover {
+  color: #20639b;
+}
+
+/* Gönder butonu */
+button[type="submit"] {
+  margin-top: 30px;
+  background: #3caea3; /* canlı yeşil-mavi */
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px #3caea399;
+}
+button[type="submit"]:hover {
+  background: #2b8d89;
+  box-shadow: 0 6px 14px #2b8d8999;
+}
+
+/* Başarı mesajı */
+.success-message {
+  display: none;
+  margin-top: 25px;
+  padding: 18px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 10px;
+  border: 1px solid #c3e6cb;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* İletişim bölümü */
+.contact {
+  background: #e6f2f1; /* çok açık yeşil-mavi */
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+  color: #20639b;
+}
+.contact h3 {
+  margin-top: 0;
+  font-weight: 700;
+}
+.contact p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Modal (KVKK) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background-color: rgba(32, 80, 114, 0.7); /* yarı saydam koyu mavi */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-content {
+  background: white;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  position: relative;
+  color: #205072;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.modal-content h3 {
+  margin-top: 0;
+  color: #3caea3;
+  font-weight: 700;
+}
+.modal-content p {
+  margin-bottom: 15px;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+.close-btn:hover {
+  color: #3caea3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  main {
+    padding: 25px 20px;
+    margin: 15px 10px;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  button[type="submit"] {
+    font-size: 1.1rem;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+  .modal-content {
+    max-width: 90vw;
+  }
+}
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
