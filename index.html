@@ -1,39 +1,85 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HemenKrediKullan</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemen Kredi Kullan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f7f9fc, #dce3f0);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 450px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #34495e;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 25px;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Hemen Kredi Kullan</h1>
-    <p>Kredinizi kolayca kullanın. Hızlı, güvenli, etkili.</p>
-    <a href="form.html" class="button">Başvuru Formuna Git</a>
-  </header>
+  <div class="container">
+    <h1>Kredi Başvurusu</h1>
+    <form action="#" method="POST" autocomplete="off">
+      <label for="name">Ad Soyad</label>
+      <input type="text" id="name" name="name" required />
 
-  <section class="info">
-    <h2>Kredi Kullanma Hakkında</h2>
-    <p>HemenKrediKullan ile kredinizi kullanmak artık çok kolay. Formu doldurun, findeks raporunuzu yükleyin ve başvurunuzu tamamlayın. Size en kısa sürede dönüş sağlanacaktır.</p>
-    <ul>
-      <li>Findex raporunuzu PDF olarak yüklemeyi unutmayın.</li>
-      <li>Bilgileriniz gizli tutulacaktır.</li>
-      <li>Form eksiksiz doldurulmalıdır.</li>
-    </ul>
-  </section>
+      <label for="phone">Telefon Numarası</label>
+      <input type="tel" id="phone" name="phone" required />
 
-  <footer>
-    <p>&copy; 2025 HemenKrediKullan. Tüm hakları saklıdır.</p>
-  </footer>
+      <label for="email">E-posta Adresi</label>
+      <input type="email" id="email" name="email" required />
+
+      <input type="submit" value="Başvuruyu Gönder" />
+    </form>
+  </div>
 </body>
 </html>
-
-<!-- form.html -->
-<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
