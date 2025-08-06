@@ -1,39 +1,64 @@
-/* Genel reset ve temel ayarlar */
-* {
-  box-sizing: border-box;
-}
+/* style.css */
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0; padding: 0;
-  background: #f0f8ff; /* Açık pastel mavi ton */
-  color: #2c3e50; /* Koyu mavi-gri */
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5faff;
+  color: #222;
   line-height: 1.6;
 }
 
-/* Header */
-header {
-  background: linear-gradient(90deg, #3caea3, #20639b);
-  color: white;
-  padding: 40px 20px;
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+  color: #2a8cc5;
+  font-size: 32px;
 }
 
-/* Main container */
-main {
-  max-width: 700px;
-  margin: 30px auto;
-  background: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Başlıklar */
-h2 {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="file"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background: #2a8cc5;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #2177aa;
+}
+
+a {
+  color: #2a8cc5;
+  text-decoration: none;
+}
   color: #20639b;
   margin-bottom: 20px;
   font-weight: 600;
