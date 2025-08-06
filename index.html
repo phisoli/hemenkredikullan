@@ -1,39 +1,175 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HemenKrediKullan - Kredi Danışmanlığı</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0;
-      background: #f0f8ff;
-      color: #2c3e50;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(90deg, #3caea3, #20639b);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0 0 10px;
-    }
-    header p {
-      font-size: 1.3rem;
-      font-weight: 300;
-    }
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HemenKrediKullan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Hemen Kredi Kullan</h1>
+    <p>Kredinizi kolayca kullanın. Hızlı, güvenli, etkili.</p>
+    <a href="form.html" class="button">Başvuru Formuna Git</a>
+  </header>
+
+  <section class="info">
+    <h2>Kredi Kullanma Hakkında</h2>
+    <p>HemenKrediKullan ile kredinizi kullanmak artık çok kolay. Formu doldurun, findeks raporunuzu yükleyin ve başvurunuzu tamamlayın. Size en kısa sürede dönüş sağlanacaktır.</p>
+    <ul>
+      <li>Findex raporunuzu PDF olarak yüklemeyi unutmayın.</li>
+      <li>Bilgileriniz gizli tutulacaktır.</li>
+      <li>Form eksiksiz doldurulmalıdır.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HemenKrediKullan. Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
+
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Başvuru Formu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2>Kredi Başvuru Formu</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="name">Ad Soyad:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Telefon Numarası:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="report">Findex Risk Raporunuzu Ekleyiniz:</label>
+      <input type="file" id="report" name="report" accept="application/pdf" required>
+
+      <label for="kvkk">
+        <input type="checkbox" id="kvkk" required>
+        KVKK metnini okudum, onaylıyorum.
+      </label>
+      <a href="#" onclick="alert('KVKK Metni: Bilgileriniz 3. kişilerle paylaşılmaz ve yalnızca başvuru amacıyla kullanılır.')">KVKK Metnini Gör</a>
+
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+</body>
+</html>
+
+<!-- style.css -->
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0faff;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background-color: white;
+  color: #0077b6;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #e0f7ff;
+}
+
+.info {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-top: 3px solid #00c3ff;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e3f2fd;
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0077b6;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="file"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #00c3ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #009fce;
+}
     h2 {
       color: #20639b;
       margin-bottom: 20px;
